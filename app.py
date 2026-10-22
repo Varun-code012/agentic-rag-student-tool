@@ -17,25 +17,30 @@ st.markdown("""
     html, body, [class*="css"] { font-family: 'Karla', sans-serif; }
     .stApp { background-color: #F5F0E6; }
     h1, h2, h3 { font-family: 'Lora', serif; color: #23262B; font-weight: 600; }
+    p, span, label, .stMarkdown { color: #23262B; }
 
-    /* Remove Streamlit's default red focus/validation ring */
-    .stTextInput input:focus {
+    /* Text input: remove Streamlit's default red focus/validation ring */
+    .stTextInput > div > div {
+        border: 1px solid #E3DCCB !important;
+        border-radius: 6px !important;
+        box-shadow: none !important;
+        background-color: #FBF8F2 !important;
+    }
+    .stTextInput > div > div:focus-within {
         border-color: #3F5945 !important;
         box-shadow: 0 0 0 1px #3F5945 !important;
     }
     .stTextInput input {
-        background-color: #FBF8F2;
-        border: 1px solid #E3DCCB;
-        border-radius: 6px;
-        color: #23262B;
+        color: #23262B !important;
     }
 
-    .answer-card {
+    .answer-card, .answer-card p {
         background-color: #FBF8F2;
         border: 1px solid #E3DCCB;
         border-radius: 8px;
         padding: 1.5rem 1.75rem;
         margin-top: 1rem;
+        color: #23262B !important;
     }
     .source-note {
         font-family: 'Lora', serif;
