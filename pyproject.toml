@@ -1,0 +1,28 @@
+[project]
+name = "agentic-rag-student-tool"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Varun", email = "varunkumarm192@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "crewai[litellm]>=1.15.23",
+    "crewai-tools>=1.15.23",
+    "faiss-cpu>=1.15.1",
+    "groq>=1.7.0",
+    "langchain-community>=0.4.2",
+    "pdfplumber>=0.11.10",
+    "python-dotenv>=1.2.4",
+    "sentence-transformers>=6.1.0",
+    "streamlit>=1.65.0",
+    "ddgs>=9.16.0",
+]
+
+[project.scripts]
+agentic-rag-student-tool = "agentic_rag_student_tool:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
